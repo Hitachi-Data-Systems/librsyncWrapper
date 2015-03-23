@@ -21,7 +21,7 @@ The specific librsync files that are required by the LibrsyncWrapper are:
 * librsync.so.1 - Output of the librsync build
 
 ### Building
-This repository contains a very rudimentary example script for Linux (really just a list of commands) that can be
+This repository contains a very rudimentary example build script for Linux (really just a list of commands) that can be
 executed to build the LibrsyncWrapper library and run the LibrsyncWrapperTest.  However, before running the script the
 first time, there are some manual steps that must be performed to copy the required librsync files to this repository's directory.  Please perform these steps after building librsync:
 
