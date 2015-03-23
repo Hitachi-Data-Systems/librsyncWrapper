@@ -16,18 +16,17 @@ The librsync library upon which this repository is built can be found here:  htt
 
 The specific librsync files that are required by the LibrsyncWrapper are:
 * librsync.h  - Can be found in the librsync repository
-* librsync-config.h - Can be found in the librsync repository
+* librsync-config.h - Output from the librsync build
 * librsync.so - Output of the librsync build
 * librsync.so.1 - Output of the librsync build
 
 ### Building
 This repository contains a very rudimentary example script for Linux (really just a list of commands) that can be
 executed to build the LibrsyncWrapper library and run the LibrsyncWrapperTest.  However, before running the script the
-first time, there are some manual steps that must be performed to copy the required librsync files to this repository's
-directory.  Please perform these steps:
+first time, there are some manual steps that must be performed to copy the required librsync files to this repository's directory.  Please perform these steps after building librsync:
 
-* Copy librsync.h and librsync-config.h (both part of the librsync repository) to the c directory
-* Copy librsync.so and librsync.so.1 (output by the librsync build) to the lib directory
+* Copy librsync.h and librsync-config.h to the c directory
+* Copy librsync.so and librsync.so.1 to the lib directory
 
 Once you have done the above, you can run the following from the top level librsyncWrapper directory:
  make
