@@ -8,6 +8,9 @@ The LibrsyncWrapperTest class is an example of how to use the LibrsyncWrapper to
 from Java.  It is a simple command line program that demonstrates the functionality provided by this repository.
 See java/com/hds/aw/commons/librsync/LibrsyncWrapperTest.java for more information.
 
+Also, the make file (described below under Building) runs LibrsyncWrapperTest, using sample data files in the 
+data directory.
+
 ## Using the LibrsyncWrapper
 ### Prerequisites
 This repository is built on top of the librsync library.  In order to build the code provided in this repository
