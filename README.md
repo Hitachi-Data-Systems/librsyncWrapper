@@ -29,5 +29,8 @@ first time, there are some manual steps that must be performed to copy the requi
 * Copy librsync.so and librsync.so.1 to the lib directory
 
 Once you have done the above, you can run the following from the top level librsyncWrapper directory:
- make
+
+```
+make
+```
 
