@@ -31,6 +31,6 @@ first time, there are some manual steps that must be performed to copy the requi
 Once you have done the above, you can run the following from the top level librsyncWrapper directory:
 
 ```
-make
+./make
 ```
 
