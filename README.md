@@ -6,7 +6,7 @@ The librsync library (which this repository wraps) can be found here:  https://g
 ## Example
 The LibrsyncWrapperTest class is an example of how to use the LibrsyncWrapper to execute librsync operations
 from Java.  It is a simple command line program that demonstrates the functionality provided by this repository.
-See the LibrsyncWrapperTest class for more information.
+See java/com/hds/aw/commons/librsync/LibrsyncWrapperTest.java for more information.
 
 ## Using the LibrsyncWrapper
 ### Prerequisites
