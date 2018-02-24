@@ -19,24 +19,29 @@ echo "cp c/*.* build/."
 cp c/*.* build/.
 
 echo ""
-echo "cp lib/librsync.so.1 build/."
-cp lib/librsync.so.1 build/.
+echo "cp lib/librsync.2.0.2.dylib build/."
+cp lib/librsync.2.0.2.dylib build/.
 
 echo ""
 echo "cd build"
 cd build
 
 echo ""
-echo "ln -s librsync.so.1 librsync.so"
-ln -s librsync.so.1 librsync.so
+echo "ln -s librsync.2.0.2.dylib librsync.2.dylib"
+ln -s librsync.2.0.2.dylib librsync.2.dylib
 
 echo ""
-echo "gcc -fPIC -c LibrsyncWrapper.c -I $JAVA_HOME/include -I $JAVA_HOME/include/linux -I ."
-gcc -fPIC -c LibrsyncWrapper.c -I $JAVA_HOME/include -I $JAVA_HOME/include/linux -I .
+echo "ln -s librsync.2.dylib librsync.dylib"
+ln -s librsync.2.dylib librsync.dylib
 
 echo ""
-echo "gcc LibrsyncWrapper.o -shared -o librsyncWrapper.so -Wl,-rpath,. -L. -lrsync"
-gcc LibrsyncWrapper.o -shared -o librsyncWrapper.so -Wl,-rpath,. -L. -lrsync
+echo "**** If the following command fails with an error that it can't find a .h header file, you may need to add a different '-I' argument, which points to the JDK's header files"
+echo "gcc -fPIC -c LibrsyncWrapper.c -I $JAVA_HOME/include -I $JAVA_HOME/include/linux -I /System/Library/Frameworks/JavaVM.framework/Versions/A/Headers -I ."
+gcc -fPIC -c LibrsyncWrapper.c -I $JAVA_HOME/include -I $JAVA_HOME/include/linux -I /System/Library/Frameworks/JavaVM.framework/Versions/A/Headers -I .
+
+echo ""
+echo "gcc -dynamiclib LibrsyncWrapper.o -o librsyncWrapper.dylib -Wl,-rpath,. -L. -lrsync"
+gcc -dynamiclib LibrsyncWrapper.o -o librsyncWrapper.dylib -Wl,-rpath,. -L. -lrsync
 
 echo ""
 echo "export LD_LIBRARY_PATH=."

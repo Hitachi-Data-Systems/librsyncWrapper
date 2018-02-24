@@ -61,7 +61,7 @@ void logMessage(char *s)
 JNIEXPORT jlong JNICALL Java_com_hds_aw_commons_librsync_LibrsyncWrapper_signatureBegin
   (JNIEnv *env, jclass cls, jint blockSize)
 {
-    rs_job_t *job = rs_sig_begin((size_t) blockSize, RS_MD4_LENGTH);
+    rs_job_t *job = rs_sig_begin((size_t) blockSize, 0, RS_BLAKE2_SIG_MAGIC);
     return (jlong) job;
 }
 
